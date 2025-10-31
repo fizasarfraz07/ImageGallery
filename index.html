@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Image Gallery — CodeAlpha</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Image Gallery</h1>
+    <p class="subtitle">Responsive Gallery • Filters • Lightbox • Smooth Animations</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="people">People</button>
+        <button class="filter-btn" data-filter="abstract">Abstract</button>
+      </div>
+      <input id="search" placeholder="Search image alt text..." aria-label="Search images" />
+    </section>
+
+    <section id="gallery" class="gallery" aria-live="polite">
+      <!-- 🌿 Nature -->
+      <div class="item" data-category="nature">
+        <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Green forest path with sunlight" />
+        <div class="meta">Green Forest</div>
+      </div>
+
+      <div class="item" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80" alt="Mountain lake reflection" />
+        <div class="meta">Mountain Lake</div>
+      </div>
+
+      <div class="item" data-category="nature">
+        <img src="https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Road through trees with sun rays" />
+        <div class="meta">Forest Road</div>
+      </div>
+
+      <!-- 🏙 City -->
+      <div class="item" data-category="city">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200&q=80" alt="New York skyline at dusk" />
+        <div class="meta">City Skyline</div>
+      </div>
+
+      <div class="item" data-category="city">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80" alt="Downtown street at night with lights" />
+        <div class="meta">Night Street</div>
+      </div>
+
+      <div class="item" data-category="city">
+        <img src="https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Modern city bridge and skyline" />
+        <div class="meta">City Bridge</div>
+      </div>
+
+      <!-- 👩 People -->
+      <div class="item" data-category="people">
+        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Portrait of a woman smiling" />
+        <div class="meta">Smiling Portrait</div>
+      </div>
+
+      <div class="item" data-category="people">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80" alt="Man looking into distance" />
+        <div class="meta">Portrait</div>
+      </div>
+
+      <div class="item" data-category="people">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1200&q=80" alt="Person under sunlight" />
+        <div class="meta">Sunlight Portrait</div>
+      </div>
+
+      <!-- 🎨 Abstract -->
+      <div class="item" data-category="abstract">
+        <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=1200&q=80" alt="Colorful abstract paint splash" />
+        <div class="meta">Color Splash</div>
+      </div>
+
+      <div class="item" data-category="abstract">
+        <img src="https://images.pexels.com/photos/1616403/pexels-photo-1616403.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Spiral pattern art" />
+        <div class="meta">Spiral Art</div>
+      </div>
+
+      <div class="item" data-category="abstract">
+        <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Color smoke abstract" />
+        <div class="meta">Color Smoke</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="close" aria-label="Close">&times;</button>
+    <button class="prev" aria-label="Previous">&#10094;</button>
+    <div class="lightbox-inner">
+      <img src="" alt="" />
+      <figcaption></figcaption>
+    </div>
+    <button class="next" aria-label="Next">&#10095;</button>
+  </div>
+
+  <footer class="footer">
+    <small>Built for CodeAlpha Internship • Advanced Design Edition</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
